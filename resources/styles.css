@@ -1,0 +1,78 @@
+.topnav {
+    max-width: 100%;    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: forestgreen;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 10px 10px darkslategrey;
+    border: 10px;
+    border-color: black;
+}
+
+.body-link {
+    color: forestgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: normal;
+}
+
+.topnav, a {
+    color: whitesmoke;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 15px;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.topnav, a:hover {
+    color: darkslategray;
+}
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.profileimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 50%;
+}
+
+.projects, h3, p {
+    align-items: center;
+    text-align: center;
+}
+
+.void {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 80%;
+}
+
+.readingintro, .readinglists {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.readinglists {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
