@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pace Calculator</title>
+        <link rel="stylesheet" href="./resources/styles.css">
+
+    </head>
+    
+    <body style="background-color: whitesmoke;">
+
+        <div class="container">
+        <div>
+        <h2>Running Pace Calculator</h2>
+        
+        <form name="formcalc">
+            <div class="form">
+                <label>How far are you running?</label>
+                <input type="text" class="form-control" name="txtnum1" placeholder="How far are you running?"></input>
+                <select class="custom-select" id="distance">
+                    <option value="kilometer">kilometers</option>
+                    <option value="mile">miles</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label>What is your goal finish time?</label>
+                <input type="text" class="form-control" name="txtnum2" placeholder="What is your goal finish time?"></input>
+                <select class="custom-select" id="time">
+                    <option value="minutes">minutes</option>
+                    <option value="hours">hours</option>
+            </select>
+            </div>
+        </form>
+        
+        <button class="btn btn-primary" onclick="times();distance();">Calculate</button>
+        <br>
+        </div>
+        <div class="result">
+        <p>You'll have to run <strong id="minutes">...</strong> minutes and <strong id="seconds">...</strong> seconds per <strong id="metric">...</strong>.</strong>.</p>
+        </div>
+        </div>
+        
+
+    <script>
+        function times() {
+            var time = document.getElementById("time").value;
+                if (time == "hours") {
+                    hours();
+                } else if (time == "minutes") {
+                    minutes();
+                }
+            return time;
+        }
+
+
+        function minutes() {
+            var num1 = Number(document.formcalc.txtnum1.value);
+            var num2 = Number(document.formcalc.txtnum2.value);
+            var res = num2/num1;
+            var pace = res.toString();
+            var minutes = parseInt(pace);
+            var seconds = (res - minutes)*60;
+            var rounded = Math.round( seconds * 10) / 10;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = rounded;
+        };
+
+        function hours() {
+            var num1=Number(document.formcalc.txtnum1.value);
+            var num2=Number(document.formcalc.txtnum2.value);
+            var res60 = res * 60
+            var pace = res60.toString();
+            var minutes = parseInt(pace);
+            var seconds = (res60 - minutes)*60;
+            var rounded = Math.round( seconds * 10 ) / 10;
+            document.getElementById("minutes").innertHTML = minutes;
+            document.getElementById("seconds").innerHTML = rounded;
+        }
+
+        function distance() {
+            var x = document.getElementById("distance").value;
+            document.getElementById("metric").innerHTML = x;
+        }
+
+        </script>
+    
+    
+    </body>
+    </html>
